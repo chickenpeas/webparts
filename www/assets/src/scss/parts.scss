@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+// 
+// ******* parts.html専用スタイルシート *******
+// ******* 他のページでは使用しない。    *******
+// 
+// -------------------------------------------
+// 
+//  INDEX
+// 
+// -------------------------------------------
+
+@import "vars";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap');
+
+html {
+  background: url(/img/worn_dots.png?0) repeat;
+}
+
+.bg_line {
+  background: url(/img/funky-lines.png?0) repeat;
+  border-top: solid 5px $baseColor;
+  border-bottom: solid 5px $baseColor;
+}
+
+h1 {
+  padding-right: 0.3em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 8rem;
+  text-align: right;
+  letter-spacing: 0.5rem;
+  border-top: solid 80px $baseColor;
+
+  @include media-query(sp) {
+    margin-top: 0;
+    font-size: 4rem;
+    border-top: solid 40px $baseColor;
+  }
+}
+
+.el__ttl {
+  margin: 100px 0 60px;
+  text-align: right;
+
+  span {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    border-top: solid 5px $baseColor;
+  }
+
+  @include media-query(sp) {
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+
+.el__description {
+  margin-bottom: 80px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: $lineHeightNarrow;
+  text-align: right;
+
+  @include media-query(sp) {
+    font-size: 1.4rem;
+  }
+}
+
+.el__description__individual {
+  text-align: right;
+
+  span {
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    border-top: solid 5px $baseColor;
+  }
+
+  @include media-query(sp) {
+    span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.bl__bgImg {
+  background: url(/img/index/top_slide1.jpg?0) left top / cover no-repeat;
+}
+
+.bl__btnSquare {
+  &__top {
+    &.el__txtB {
+      .en {
+        @include txtB--en($white);
+      }
+
+      .ja {
+        @include txtB--ja($white);
+      }
+    }
+  }
+}
+
+.bl__btnSquare.bl__smoke {
+  .bl__smoke__inner {
+    .el__arrow {
+      margin-left: auto;
+    }
+  }
+}
+
+.bl__smoke.bl__btnSquare {
+  .bl__btnSquare__bottom {
+    transition: 1s ease;
+  }
+
+  .bl__smoke__inner {
+    @include transition();
+
+    padding: 0.5em 1em 1em;
+    text-align: center;
+  }
+
+  .el__arrow {
+    @include transition();
+
+    span {
+      @include transition();
+    }
+  }
+
+  &:hover {
+    .bl__smoke__inner {
+      color: $white;
+    }
+
+    .el__arrow {
+      border-bottom-color: $white;
+
+      span {
+        background: $white;
+      }
+    }
+  }
+}
+
+.bl__btnSquareFrame {
+  &__inner.el__txtE {
+    .ja {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,869 @@
+@charset "utf-8";
+
+// -------------------------------------------
+// 
+//  INDEX
+// 
+// -------------------------------------------
+//    @import
+// -------------------------------------------
+//    base
+// -------------------------------------------
+//    layout
+// -------------------------------------------
+//    block
+// -------------------------------------------
+//    element
+// -------------------------------------------
+//    footer
+// -------------------------------------------
+//    text style
+// -------------------------------------------
+//    button -- bl__btnSquare
+// -------------------------------------------
+//    button -- bl__btnNaviBar
+// -------------------------------------------
+//    button -- bl__btnNaviBar2col
+// -------------------------------------------
+//    button -- bl__btnSquareFrame
+// -------------------------------------------
+//    button -- bl__btnRectangleRound
+// -------------------------------------------
+//    button parts -- el__arrow
+// -------------------------------------------
+//    animation -- smoke
+// -------------------------------------------
+//    imgViewer -- bl__imgViewerHover
+// -------------------------------------------
+//    List -- bl__tableColumn3
+// -------------------------------------------
+//    Hero -- bl__heroIncludeContents
+// -------------------------------------------
+
+
+
+
+//    @import
+// -------------------------------------------
+@import "normalize";
+@import "vars";
+@import "mixin";
+@import "common";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
+
+
+
+//    base
+// -------------------------------------------
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+  line-height: $lineHeightBase;
+
+  @include media-query(pc) {
+    font-size: $fontSizePc;
+  }
+
+  @include media-query(sp) {
+    font-size: $fontSizeSp;
+  }
+
+  @include media-query(tab) {
+    font-size: $fontSizeTab;
+  }
+}
+
+
+
+//    layout
+// -------------------------------------------
+.ly__max {
+  max-width: $containerSizeFull;
+  margin: auto;
+}
+
+.ly__wrapper {
+  width: 100%;
+
+  @include media-query(pc) {
+    background:
+      url(/img/bg_2.png?0) center 300px repeat-y,
+      url(/img/bg_1.jpg?0) left top repeat-y;
+    background-size: 100%, 100%;
+  }
+
+  @include media-query(sp-tab) {
+    background-color: $bgColor;
+  }
+}
+
+.ly__container {
+  @include media-query(pc) {
+    width: $containerSizeBase;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.ly__containerSp {
+  @include media-query(sp-tab) {
+    width: 100%;
+    padding-right: $contentPaddingSp;
+    padding-left: $contentPaddingSp;
+  }
+}
+
+
+
+//    block
+// -------------------------------------------
+.bl__baseFlex {
+  @include baseFlex();
+}
+
+.bl__col3 {
+  @include baseFlex($fw:wrap, $ai:flex-start);
+
+  padding: 0 40px;
+
+  &__item {
+    width: calc(100% / 3 - 10px);
+  }
+
+  @include media-query(sp) {
+    padding: 0;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+
+
+//    element
+// -------------------------------------------
+// インラインでタグ画像を並べるとき縦位置を揃える（line-heightの高さに揃う）
+.el__tagAlign {
+  display: flex;
+  align-items: center;
+
+  &__child {
+    display: flex;
+  }
+}
+
+// ページにH1を持たせるための非表示エレメント
+.el__pageTtlNoShow {
+  margin: 0;
+  line-height: $lineHeightNone;
+  text-indent: -999999px;
+}
+
+
+// iconのサイズ設定
+.el__icoClock {
+  @include media-query(sp-tab) {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}
+
+.el__icoFork {
+  @include media-query(sp-tab) {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}
+
+.el__icoPrice {
+  @include media-query(sp-tab) {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}
+
+// tagのサイズ設定
+.el__tag2letters {
+  @include media-query(sp-tab) {
+    width: 50px;
+    height: 15px;
+    object-fit: contain;
+  }
+}
+
+.el__tag5letters {
+  @include media-query(sp-tab) {
+    width: 98px;
+    height: 16px;
+    object-fit: contain;
+  }
+}
+
+
+// ページトップ付近のリードテキスト
+.el__txtLead {
+  @include media-query(tab-pc) {
+    font-size: 1.9rem;
+  }
+
+  @include media-query(sp) {
+    font-size: 1rem;
+  }
+}
+
+
+
+//    footer
+// -------------------------------------------
+.footer {
+  &__nav {
+    justify-content: center;
+    padding-right: 6%;
+    padding-left: 6%;
+
+    a {
+      @include baseLink();
+
+      padding-right: 2em;
+
+      &:not(:last-child) {
+        border-right: solid 1px $baseColor;
+      }
+
+      &:not(:first-child) {
+        padding-left: 2em;
+      }
+    }
+  }
+
+  &__address {
+    p {
+      font-style: normal;
+      line-height: $lineHeightNarrow;
+    }
+  }
+
+  @include media-query(sp-tab) {
+    &__nav {
+      &.bl__baseFlex {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      a {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &__address {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+
+//    text style
+// -------------------------------------------
+.el__txtA {
+  @include txtCommon();
+
+  margin: 0;
+
+  .en {
+    @include txtA--en();
+  }
+
+  .ja {
+    @include txtA--ja();
+  }
+}
+
+.el__txtB {
+  @include txtCommon();
+
+  margin: 0;
+
+  .en {
+    @include txtB--en();
+  }
+
+  .ja {
+    @include txtB--ja();
+  }
+}
+
+.el__txtC {
+  @include txtCommon();
+
+  margin: 0;
+
+  .en {
+    @include txtC--en();
+  }
+
+  .ja {
+    @include txtC--ja();
+  }
+}
+
+.el__txtD {
+  @include txtCommon(left);
+
+  margin: 0;
+
+  .en {
+    @include txtD--en();
+  }
+
+  .ja {
+    @include txtD--ja();
+  }
+}
+
+.el__txtE {
+  margin: 0;
+
+  .ja {
+    @include txtE--ja();
+  }
+}
+
+.el__txtLineTB {
+  display: inline-block;
+  padding: 0 2em;
+  line-height: $lineHeightNarrow;
+  border-top: solid 1px $baseColor;
+  border-bottom: solid 1px $baseColor;
+}
+
+.el__sideCircleBk {
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: "●";
+  }
+
+  &::before {
+    padding-right: 0.3em;
+  }
+
+  &::after {
+    padding-left: 0.3em;
+  }
+}
+
+.el__listPartsDotsMiddle {
+  display: flex;
+  align-items: center;
+
+  &__dots {
+    flex-grow: 1;
+    height: 2px;
+    margin: 0.27em 0.5em 0;
+    background: url(/img/three_dots.png?0) repeat-x;
+  }
+}
+
+.el__tagCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.8rem;
+  color: $white;
+  background: $lightOcher;
+  border-radius: 50%;
+
+  @include media-query(sp-tab) {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+  }
+}
+
+
+
+//    button -- bl__btnSquare
+// -------------------------------------------
+.bl__btnSquare {
+  @include baseLink();
+
+  overflow: hidden;
+  background: $white;
+  border-radius: 12px;
+
+  &__top {
+    position: relative;
+    padding: 1.5em 0.7em 2em;
+    background: $baseColor;
+
+    &::after {
+      position: absolute;
+      bottom: 15px;
+      left: -15px;
+      display: block;
+      width: calc(100% + 30px);
+      height: 1px;
+      content: "";
+      background: $darkOcher;
+    }
+  }
+
+  &__bottom {
+    @include transition();
+  }
+
+  &:hover {
+    .bl__btnSquare__bottom {
+      background: $darkOcher;
+    }
+  }
+}
+
+
+
+//    button -- bl__btnNaviBar
+// -------------------------------------------
+.bl__btnNaviBar {
+  @include clearfix();
+  @include baseLink();
+
+  padding: 0 4% 0.3em;
+  background: $darkOcher;
+  border-bottom: solid 1px $bgColor;
+
+  &__main {
+    padding-top: 0.5em;
+    padding-right: 35px;
+    line-height: $lineHeightFit;
+    color: $white;
+
+    .big {
+      padding-right: 1em;
+      font-size: 1.9rem;
+      letter-spacing: 0.2rem;
+    }
+
+    .small {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__sub {
+    padding-right: 35px;
+    font-size: 1.1rem;
+  }
+
+  &__ico {
+    float: right;
+    width: 35px;
+    padding: 15px 0 0 5px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+
+
+//    button -- bl__btnNaviBar2col
+// -------------------------------------------
+.bl__btnNaviBar2col {
+  @include baseFlex($fw:wrap);
+
+  &__item {
+    @include baseLink($display:flex);
+
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0.8em;
+    background: $darkOcher;
+    border-bottom: solid 1px $bgColor;
+
+    &:nth-child(2n+1) {
+      border-right: solid 1px $bgColor;
+    }
+
+    .main {
+      padding-right: 0.5em;
+      font-size: 1.4rem;
+      line-height: $lineHeightFit;
+      color: $white;
+      letter-spacing: 0.2rem;
+    }
+
+    .sub {
+      font-size: 1rem;
+      line-height: $lineHeightFit;
+    }
+  }
+}
+
+
+
+//    button -- bl__btnSquareFrame
+// -------------------------------------------
+.bl__btnSquareFrame {
+  position: relative;
+  display: block;
+  width: 100px; // 籠谷さん指示のサイズ設定
+  height: 100px; // 籠谷さん指示のサイズ設定
+  text-decoration: none;
+  background: rgba(darken($baseColor, 25%), 0.6);
+  border: solid 1px $white;
+  border-radius: 5px;
+
+  &::after {
+    position: absolute;
+    bottom: 8px;
+    left: calc(50% + 5px);
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-top: solid 2px $white;
+    border-right: solid 2px $white;
+    transform: rotate(135deg);
+    transform-origin: top left;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    padding-top: 5px;
+    font-size: 1.3rem;
+    line-height: $lineHeightNarrow;
+    color: $white;
+    text-align: center;
+  }
+}
+
+
+
+//    button -- bl__btnRectangleRound
+// -------------------------------------------
+.bl__btnRectangleRound {
+  @include baseLink($color:$white, $display:inline-block);
+
+  padding: 0 1em;
+  background: $baseColor;
+  border-radius: 7px;
+
+  span {
+    line-height: $lineHeightFit;
+    color: $white;
+  }
+
+  &--convert {
+    background: $white;
+    border: solid 1px $baseColor;
+
+    span {
+      color: $baseColor;
+    }
+  }
+}
+
+
+
+//    button parts -- el__arrow
+// -------------------------------------------
+.el__arrow {
+  position: relative;
+  width: 48px;
+  height: 14px;
+  border-bottom: solid 1px $darkOcher;
+
+  span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: $darkOcher;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+}
+
+
+
+//    animation -- smoke
+// -------------------------------------------
+.bl__smoke {
+  &__parent {
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(/img/smoke.png?0) no-repeat;
+    background-size: cover;
+    opacity: 0;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 1.5em 0 0;
+  }
+
+  &:hover {
+    .bl__smoke__item {
+      animation: smoke 1s ease;
+    }
+  }
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+//    imgViewer -- bl__imgViewerHover
+// -------------------------------------------
+.bl__imgViewerHover {
+  @include clearfix();
+
+  width: 640px;
+  margin: 0 auto 45px;
+
+  &__main {
+    margin-bottom: 10px;
+    line-height: $lineHeightNone;
+  }
+
+  &__thum {
+    @include baseFlex($fw:wrap, $jc:flex-start, $ai:flex-start);
+
+    float: right;
+    margin-left: 10px;
+
+    div {
+      margin-bottom: 10px;
+      line-height: $lineHeightNone;
+
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+      }
+    }
+
+    &.col2 {
+      width: 150px; // w:70x2 + margin:10
+
+      div {
+        &:not(:nth-child(2n)) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &.col3 {
+      width: 230px; // w:70x3 + margin:20
+
+      div {
+        &:not(:nth-child(3n)) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__txt {
+    float: left;
+
+    &.col2Txt {
+      width: calc(100% - 160px);
+    }
+
+    &.col3Txt {
+      width: calc(100% - 240px);
+    }
+  }
+
+  @include media-query(sp) {
+    width: 100%;
+    margin-bottom: 2em;
+
+    &__thum {
+      @include baseFlex($fw:wrap, $jc:center, $ai:flex-start);
+
+      float: none;
+      margin-left: 0;
+
+      div {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &.col2,
+      &.col3 {
+        width: 100%;
+
+        div {
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    &__txt {
+      float: none;
+
+      &.col2Txt,
+      &.col3Txt {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+//    List -- bl__tableColumn3
+// -------------------------------------------
+.bl__tableColumn3 {
+  column-count: 3;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    border-bottom: solid 1px $baseColor;
+
+    &>span {
+      display: block;
+
+      &:first-child {
+        flex-grow: 1;
+        padding: 0.2em 0.7em;
+        background: $bgColor;
+      }
+
+      &:last-child {
+        width: 2.4em;
+        padding: 0.2em 0;
+        text-align: center;
+      }
+    }
+
+    &.head {
+      border-top: solid 1px $baseColor;
+    }
+  }
+
+  @include media-query(sp-tab) {
+    column-count: 1;
+
+    &__item {
+      &.head {
+        border-top: none;
+      }
+
+      &:first-child {
+        border-top: solid 1px $baseColor;
+      }
+
+      &>span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+
+//    Hero -- heroIncludeContents
+// -------------------------------------------
+.bl__heroIncludeContents {
+  position: relative;
+
+  &__ttl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - (100px + 3.2rem + 3.2rem));
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include media-query(pc) {
+    &__bg {
+      .pc {
+        width: 100%;
+        max-width: $containerSizeFull;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+
+    &__box {
+      @include baseFlex($jc:center);
+
+      position: absolute;
+      top: calc(100% - (100px + 2em + 2em));
+      left: 0;
+      width: 100%;
+      height: calc(100px + 2em + 2em);
+    }
+  }
+
+  @include media-query(sp-tab) {
+    line-height: $lineHeightNone;
+
+    &__box {
+      display: none;
+    }
+
+    &__ttl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding-top: 3.2rem;
+    }
+  }
+}
