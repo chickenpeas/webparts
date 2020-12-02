@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap');
+html
+{
+    background: url(/img/worn_dots.png?0) repeat;
+}
+
+.bg_line
+{
+    border-top: solid 5px #503f30;
+    border-bottom: solid 5px #503f30;
+    background: url(/img/funky-lines.png?0) repeat;
+}
+
+h1
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 8rem;
+
+    padding-right: .3em;
+
+    text-align: right;
+    letter-spacing: .5rem;
+
+    border-top: solid 80px #503f30;
+}
+
+@media screen and (max-width: 640px)
+{
+    h1
+    {
+        font-size: 4rem;
+
+        margin-top: 0;
+
+        border-top: solid 40px #503f30;
+    }
+}
+
+.el__ttl
+{
+    margin: 100px 0 60px;
+
+    text-align: right;
+}
+
+.el__ttl span
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+
+    display: inline-block;
+
+    letter-spacing: .5rem;
+
+    border-top: solid 5px #503f30;
+}
+
+@media screen and (max-width: 640px)
+{
+    .el__ttl span
+    {
+        font-size: 2rem;
+    }
+}
+
+.el__description
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+
+    margin-bottom: 80px;
+
+    text-align: right;
+}
+
+@media screen and (max-width: 640px)
+{
+    .el__description
+    {
+        font-size: 1.4rem;
+    }
+}
+
+.el__description__individual
+{
+    text-align: right;
+}
+
+.el__description__individual span
+{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+
+    display: inline-block;
+
+    letter-spacing: .5rem;
+
+    border-top: solid 5px #503f30;
+}
+
+@media screen and (max-width: 640px)
+{
+    .el__description__individual span
+    {
+        font-size: 1.4rem;
+    }
+}
+
+.bl__bgImg
+{
+    background: url(/img/index/top_slide1.jpg?0) left top/cover no-repeat;
+}
+
+.bl__btnSquare__top.el__txtB .en
+{
+    font-size: 2.6rem;
+
+    color: #fff;
+}
+
+@media screen and (max-width: 640px)
+{
+    .bl__btnSquare__top.el__txtB .en
+    {
+        font-size: 2rem;
+    }
+}
+
+.bl__btnSquare__top.el__txtB .ja
+{
+    font-size: 1.4rem;
+
+    color: #fff;
+}
+
+@media screen and (max-width: 640px)
+{
+    .bl__btnSquare__top.el__txtB .ja
+    {
+        font-size: 1rem;
+    }
+}
+
+.bl__btnSquare.bl__smoke .bl__smoke__inner .el__arrow
+{
+    margin-left: auto;
+}
+
+.bl__smoke.bl__btnSquare .bl__btnSquare__bottom
+{
+    transition: 1s ease;
+}
+
+.bl__smoke.bl__btnSquare .bl__smoke__inner
+{
+    padding: .5em 1em 1em;
+
+    transition: ease .3s;
+    text-align: center;
+}
+
+.bl__smoke.bl__btnSquare .el__arrow
+{
+    transition: ease .3s;
+}
+
+.bl__smoke.bl__btnSquare .el__arrow span
+{
+    transition: ease .3s;
+}
+
+.bl__smoke.bl__btnSquare:hover .bl__smoke__inner
+{
+    color: #fff;
+}
+
+.bl__smoke.bl__btnSquare:hover .el__arrow
+{
+    border-bottom-color: #fff;
+}
+
+.bl__smoke.bl__btnSquare:hover .el__arrow span
+{
+    background: #fff;
+}
+
+.bl__btnSquareFrame__inner.el__txtE .ja
+{
+    color: #fff;
+}
