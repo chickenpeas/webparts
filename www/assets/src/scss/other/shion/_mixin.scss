@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+// -------------------------------------------
+// 
+//  INDEX
+// 
+// -------------------------------------------
+//    @import
+// -------------------------------------------
+//    base
+// -------------------------------------------
+//    txtCommon
+// -------------------------------------------
+//    txtA-E
+// -------------------------------------------
+
+
+
+//    @import
+// -------------------------------------------
+@import "vars";
+
+
+
+//    base
+// -------------------------------------------
+// デスクトップ・タブレット・スマホの css 切り替え
+@mixin media-query($media: sp) {
+  @media #{map-get($screen-sizes, $media)} {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin transition($duration: 0.3s) {
+  transition: ease $duration;
+}
+
+@mixin reset-ul {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset-dl {
+  margin: 0;
+}
+
+@mixin reset-dd {
+  margin: 0;
+}
+
+@mixin baseLink($color:$baseColor, $display:block) {
+  display: $display;
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin baseFlex($fw:nowrap, $jc:space-between, $ai:stretch) {
+  display: flex;
+  flex-wrap: $fw;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+
+
+//    txtCommon
+// -------------------------------------------
+@mixin txtCommon($ta:center, $pdB:8px) {
+  text-align: $ta;
+
+  .en {
+    display: block;
+    padding-bottom: $pdB;
+    font-family:
+      'Source Serif Pro',
+      serif;
+    font-weight: normal;
+    line-height: $lineHeightFitEn;
+    letter-spacing: 0.4rem;
+  }
+
+  .ja {
+    display: block;
+    font-weight: normal;
+    line-height: $lineHeightFit;
+  }
+}
+
+
+
+//    txtA
+// -------------------------------------------
+@mixin txtA--en($color:$baseColor) {
+  font-size: 4.5rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 2.6rem;
+  }
+}
+
+@mixin txtA--ja($color:$baseColor) {
+  font-size: 2.3rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+//    txtB
+// -------------------------------------------
+@mixin txtB--en($color:$baseColor) {
+  font-size: 2.6rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 2rem;
+  }
+}
+
+@mixin txtB--ja($color:$baseColor) {
+  font-size: 1.4rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 1rem;
+  }
+}
+
+
+
+//    txtC
+// -------------------------------------------
+@mixin txtC--en($color:$baseColor) {
+  font-size: 3.6rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 2rem;
+  }
+}
+
+@mixin txtC--ja($color:$baseColor) {
+  font-size: 1.9rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 1rem;
+  }
+}
+
+
+
+//    txtD
+// -------------------------------------------
+@mixin txtD--en($color:$baseColor) {
+  font-size: 2.3rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin txtD--ja($color:$baseColor) {
+  font-size: 1.37rem;
+  color: $color;
+
+  @include media-query(sp) {
+    font-size: 1rem;
+  }
+}
+
+
+
+//    txtE
+// -------------------------------------------
+@mixin txtE--ja($color:$baseColor) {
+  display: block;
+  font-size: 1.867rem;
+  line-height: $lineHeightNarrow;
+  color: $color;
+  text-align: center;
+
+  @include media-query(sp) {
+    font-size: 1.6rem;
+  }
+}

@@ -36,7 +36,7 @@ gulp.task('sass', () => {
 
 gulp.task('images', () => {
   return gulp.src(paths.imgSrc + '/**/*')
-    .pipe(plumber())
+    // .pipe(plumber())
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({quality: 75, progressive: true}),

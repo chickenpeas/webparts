@@ -1,37 +1,16 @@
 @charset "UTF-8";
 
 $screen-sizes: ('sp': 'screen and (max-width: 640px)',
-'tab': 'screen and (min-width: 641px) and (max-width: 1024px)',
-'pc': 'screen and (min-width: 1025px)',
-'tab-pc': 'screen and (min-width: 641px)',
-'sp-tab': 'screen and (max-width: 1024px)'
+  'tab': 'screen and (min-width: 641px) and (max-width: 1024px)',
+  'pc': 'screen and (min-width: 1025px)',
+  'tab-pc': 'screen and (min-width: 641px)',
+  'sp-tab': 'screen and (max-width: 1024px)'
 ) !default;
 
+$fixedWidth: 950px;
 
-// color
-$baseColor: #503f30;
-$bgColor: #faf8e1;
-$white: #fff;
-$darkOcher: #c8a063;
-$lightOcher: #c9a063;
-$lightBrown: #a48b78;
-
-
-// content width
-$containerSizeFull: 2000px;
-$containerSizeBase: 1024px;
-$contentPaddingSp: 6%;
-
-
-// font-size
-$fontSizePc: 1.6rem;
-$fontSizeSp: 1rem;
-$fontSizeTab: 1.6rem;
-
-
-// line-height
-$lineHeightBase: 2.17;
-$lineHeightNarrow: 1.6;
-$lineHeightFit: 1.2;
-$lineHeightFitEn: 1;
-$lineHeightNone: 0;
+$lighterOrange: #D9A384;
+$skinGray:#BFA89B;
+$reddySand: #BF7960;
+$skinBrown: #734939;
+$darkerSkin: #260101;
