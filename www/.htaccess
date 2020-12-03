@@ -1,0 +1,8 @@
+
+#####wpcomment_nojpdeny#####
+SetEnvIf Request_URI ".*" WpCommentDeny
+#####end:wpcomment_nojpdeny#####
+
+<FilesMatch "\.html$">
+  AddType application/x-httpd-php .html
+</FilesMatch>
