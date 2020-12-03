@@ -23,6 +23,12 @@
 
     <div class="bl__parts pdTB80">xxx</div>
 
+    <?php 
+      $domain = $_SERVER['HTTP_HOST'];
+      echo "ドメイン名 : $domain";
+      include($domain . '\footer.php');
+    ?>
+
     <script src="/assets/js/laz-load.min.js" defer></script>
     <script src="/assets/js/gallery_modal.min.js"></script>
     <script src="/assets/js/scrollTo.min.js"></script>

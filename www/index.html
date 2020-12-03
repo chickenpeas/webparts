@@ -46,7 +46,11 @@
       </div>
     </section>
 
-    <?php include(__DIR__ . '/footer.php') ?>
-
+    <?php 
+      $domain = $_SERVER['HTTP_HOST'];
+      echo "ドメイン名 : $domain";
+      include($domain . '\footer.php');
+    ?>
+    
   </body>
 </html>
