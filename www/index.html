@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="page__index">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
@@ -13,39 +13,41 @@
     <!&#91;endif&#93;-->
   </head>
   
-  <body class="ly__max">
-    <h1>サイト別パーツライブラリ</h1>
+  <body class="page__index__container">
 
-    <h2>ホテル</h2>
+    <div class="bl__fixedWidth pdTB80"><h1 class="el__ttl">Parts Library</h1></div>
 
-    <div>
-      <p>hotel-areaone.com</p>
-      <ul>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-      </ul>
-    </div>
+    <div class="bl__parts pdTB80"><h2 class="el__ttlSub el__ttlSub--underline">Index</h2></div>
 
-    <div>
-      <p>hotel-areaone.com以外</p>
-      <ul>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-        <li><a href="#">xxx</a></li>
-      </ul>
-    </div>
+    <section class="bl__parts pdTB80">
+      <h3 class="el__ttlSub">Hotel</h3>
 
-    <h2>その他施設</h2>
+      <div class="pdTB80 bl__narrowWidth">
+        <p>ホテルエリアワン（hotel-areaone.com）</p>
+        <ul>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
 
-    <div>
-      <p>shion.hotel-areaone.com</p>
-      <ul>
-        <li><a href="/other/shion.html">しおん</a></li>
-      </ul>
-    </div>
+      <div class="bl__narrowWidth">
+        <p>提携/パートナーホテル</p>
+        <ul>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="bl__parts pdTB80">
+      <h3 class="el__ttlSub">Other Facilities</h3>
+      <div class="bl__narrowWidth">
+        <ul>
+          <li><a href="/other/shion.html">獅温 The spa SHION</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/footer.html'); ?>
 
   </body>
 </html>

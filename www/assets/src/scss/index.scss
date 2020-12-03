@@ -7,3 +7,129 @@
 // -------------------------------------------
 //    @import
 // -------------------------------------------
+
+
+
+//    @import
+// -------------------------------------------
+@import "normalize";
+@import "vars";
+@import "mixin";
+@import "common";
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
+
+.page__index {
+  background: url(/assets/img/wild_flowers.png) repeat;
+
+  .footer {
+    font-family: 'Titillium Web',
+      sans-serif;
+    background: $white;
+    font-size: 2rem;
+    border-top: solid 1px $darkerSkin;
+
+    a {
+      color: $darkerSkin;
+    }
+  }
+
+  &__container {
+    font-family: 'Kosugi', sans-serif;
+    color: $darkerSkin;
+    background: rgba($skinGray, .4);
+  }
+
+  .bl__fixedWidth {
+    width: $fixedWidth;
+    margin: 0 auto;
+  }
+
+  .bl__narrowWidth {
+    width: $narrowWidth;
+    margin: 0 auto;
+  }
+
+  .el__ttl {
+    font-size: 6rem;
+    letter-spacing: .1em;
+    margin: 0;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: $thicLine;
+      background: $darkerSkin;
+      margin: .5em auto;
+    }
+  }
+
+  .el__ttlSub {
+    font-size: 4rem;
+    font-family: 'Titillium Web',
+      sans-serif;
+    text-align: center;
+    letter-spacing: .1em;
+
+    &--underline {
+      &::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: $thicLine;
+        background: $darkerSkin;
+        margin: .5em auto;
+      }
+    }
+  }
+
+  .bl__parts {
+    background: $white;
+  }
+
+  @include media-query(tab) {
+    .bl__fixedWidth {
+      width: 100%;
+      padding-right: 6%;
+      padding-left: 6%;
+    }
+
+    .bl__narrowWidth {
+      width: 100%;
+      padding-right: 6%;
+      padding-left: 6%;
+    }
+  }
+
+  @include media-query(sp) {
+    .bl__fixedWidth {
+      width: 100%;
+      padding-right: 6%;
+      padding-left: 6%;
+    }
+
+    .bl__narrowWidth {
+      width: 100%;
+      padding-right: 6%;
+      padding-left: 6%;
+    }
+
+    .el__ttl {
+      font-size: 4rem;
+
+      &::before,
+      &::after {
+        content: "";
+        margin: .8em auto;
+      }
+    }
+
+    .el__ttlSub {
+      font-size: 2.5rem;
+    }
+  }
+}
