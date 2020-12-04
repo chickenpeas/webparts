@@ -41,18 +41,13 @@
       <h3 class="el__ttlSub">Other Facilities</h3>
       <div class="bl__narrowWidth">
         <ul>
-          <li><a href="/other/shion.html">獅温 The spa SHION</a></li>
+          <li><a href="/other/shion.php">獅温 The spa SHION</a></li>
         </ul>
       </div>
     </section>
 
     <?php
-      $root = $_SERVER['DOCUMENT_ROOT'];
-      include ($root . '/includes/footer.php');
-    ?>
-
-    <?php 
-      include 'includes/footer.php';
+      include ($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
     ?>
     
   </body>

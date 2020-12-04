@@ -23,10 +23,10 @@
 
     <div class="bl__parts pdTB80">xxx</div>
 
-    <?php 
-      $domain = $_SERVER['HTTP_HOST'];
-      echo "ドメイン名 : $domain";
-      include($domain . '\footer.php');
+    <a href="/hotel/hotel.php">hotel</a>
+
+    <?php
+      include ($_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php');
     ?>
 
     <script src="/assets/js/laz-load.min.js" defer></script>
