@@ -46,8 +46,13 @@
       </div>
     </section>
 
+    <?php
+      $root = $_SERVER['DOCUMENT_ROOT'];
+      include ($root . '/includes/footer.php');
+    ?>
+
     <?php 
-      include 'includes/footer.php'
+      include 'includes/footer.php';
     ?>
     
   </body>
