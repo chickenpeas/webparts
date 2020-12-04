@@ -27,7 +27,6 @@
       sans-serif;
     background: $white;
     font-size: 2rem;
-    border-top: solid 1px $darkerSkin;
 
     a {
       color: $darkerSkin;
@@ -65,10 +64,21 @@
 
   .bl__parts {
     background: $white;
-    border-bottom: solid $thicLine $lighterOrange;
+    border-bottom: solid 3em $lighterOrange;
 
     &:nth-child(2n) {
-      border-bottom: solid $thicLine $reddySand;
+      border-bottom: solid 3em $reddySand;
+    }
+  }
+
+  .bl__col3 {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      width: calc(100% / 3);
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 

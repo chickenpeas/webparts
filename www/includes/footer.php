@@ -1,3 +1,3 @@
 <footer class="footer pdTB40 txC">
-  <div><a href="/index.html">Index</a></div>
+  <div><a href="/index.php">Index</a></div>
 </footer>

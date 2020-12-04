@@ -20,18 +20,9 @@
 
     <section class="bl__parts pdTB80">
       <h3 class="el__ttlSub">Hotel</h3>
-
-      <div class="pdTB80 bl__narrowWidth">
-        <p>ホテルエリアワン（hotel-areaone.com）</p>
-        <ul>
-          <li><a href="#"></a></li>
-        </ul>
-      </div>
-
       <div class="bl__narrowWidth">
-        <p>提携/パートナーホテル</p>
         <ul>
-          <li><a href="#"></a></li>
+          <li></li>
         </ul>
       </div>
     </section>
@@ -41,7 +32,7 @@
       <h3 class="el__ttlSub">Other Facilities</h3>
       <div class="bl__narrowWidth">
         <ul>
-          <li><a href="/other/shion.php">獅温 The spa SHION</a></li>
+          <li><a href="/shion.php">獅温 The spa SHION</a></li>
         </ul>
       </div>
     </section>
