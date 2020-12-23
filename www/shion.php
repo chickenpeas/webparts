@@ -20,6 +20,10 @@
     <p class="txC mgB80">獅温 The spa SHION<br>shion.hotel-areaone.com</p>
 
     <div class="bl__parts pdTB80">
+
+      <h3>bl__btnSquare bl__smoke</h3>
+      <p>カード型のボタンボックス + ホバーでスモークの効果</p>
+
       <div class="bl__col3">
         <a href="#" class="bl__col3__item bl__btnSquare bl__smoke">
           <div class="bl__btnSquare__top">title</div>
@@ -52,7 +56,8 @@
           </div>
         </a><!--// bl__btnSquare bl__smoke -->
       </div>
-    </div>
+
+    </div><!-- /.bl__parts -->
 
     <div class="bl__parts pdTB80">xxx</div>
 

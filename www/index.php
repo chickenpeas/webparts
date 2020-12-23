@@ -22,7 +22,10 @@
       <h3 class="el__ttlSub">Hotel</h3>
       <div class="bl__narrowWidth">
         <ul>
-          <li></li>
+          <li>hotel1</li>
+          <li>hotel2</li>
+          <li>hotel3</li>
+          <li>hotel4</li>
         </ul>
       </div>
     </section>
