@@ -21,12 +21,14 @@
 
     <div class="bl__parts pdTB80">
 
-      <h3>bl__btnSquare bl__smoke</h3>
-      <p>カード型のボタンボックス + ホバーでスモークの効果</p>
+      <div class="bl__fixedWidth">
+        <h3>bl__btnSquare bl__smoke</h3>
+        <p>カード型のボタンボックス + ホバーでスモークの効果</p>
+      </div>
 
-      <div class="bl__col3">
+      <div class="bl__col3 bl__fixedWidth">
         <a href="#" class="bl__col3__item bl__btnSquare bl__smoke">
-          <div class="bl__btnSquare__top">title</div>
+          <div class="bl__btnSquare__top txC">title</div>
           <div class="bl__btnSquare__bottom bl__smoke__parent">
             <div class="bl__smoke__item"></div>
             <div class="bl__smoke__inner txC">
@@ -36,7 +38,7 @@
           </div>
         </a><!--// bl__btnSquare bl__smoke -->
         <a href="#" class="bl__col3__item bl__btnSquare bl__smoke">
-          <div class="bl__btnSquare__top">title</div>
+          <div class="bl__btnSquare__top txC">title</div>
           <div class="bl__btnSquare__bottom bl__smoke__parent">
             <div class="bl__smoke__item"></div>
             <div class="bl__smoke__inner txC">
@@ -46,7 +48,7 @@
           </div>
         </a><!--// bl__btnSquare bl__smoke -->
         <a href="#" class="bl__col3__item bl__btnSquare bl__smoke">
-          <div class="bl__btnSquare__top">title</div>
+          <div class="bl__btnSquare__top txC">title</div>
           <div class="bl__btnSquare__bottom bl__smoke__parent">
             <div class="bl__smoke__item"></div>
             <div class="bl__smoke__inner txC">

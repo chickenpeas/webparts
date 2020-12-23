@@ -11,7 +11,13 @@
 // -------------------------------------------
 //    button -- bl__btnSquare
 // -------------------------------------------
+//    button parts -- el__arrow
+// -------------------------------------------
 //    animation -- smoke
+// -------------------------------------------
+// 
+// 
+//    combine setting
 // -------------------------------------------
 
 
@@ -19,7 +25,8 @@
 //    @import
 // -------------------------------------------
 @import "../vars";
-
+@import "../mixin.scss";
+@import "../common.scss";
 
 
 //    mixin
@@ -75,6 +82,28 @@
 }
 
 
+//    button parts -- el__arrow
+// -------------------------------------------
+.el__arrow {
+  position: relative;
+  width: 48px;
+  height: 14px;
+  border-bottom: solid 1px #d1c2c2;
+
+  span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #d1c2c2;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+}
+
+
 //    animation -- smoke
 // -------------------------------------------
 .bl__smoke {
@@ -116,5 +145,36 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+
+
+//    combine setting
+// -------------------------------------------
+.page__parts {
+  .bl__btnSquare {
+    .bl__smoke__inner {
+      padding: 1.5em 0 1em;
+    }
+
+    .el__arrow {
+      margin-right: 1em;
+      margin-left: auto;
+    }
+  }
+
+  @include media-query(sp) {
+    .bl__col3 {
+      flex-wrap: wrap;
+
+      &__item {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+      }
+    }
   }
 }
